@@ -1,0 +1,4 @@
+name: myapplication
+dependencies:
+  flutter:
+    sdk: flutter
