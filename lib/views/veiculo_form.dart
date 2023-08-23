@@ -1,4 +1,3 @@
-import 'dart:js';
 
 import 'package:flutter/material.dart';
 import 'package:veiculos/models/veiculo.dart';
@@ -11,13 +10,11 @@ class VeiculoForm extends StatelessWidget {
   final Map<String, String> _formData = {};
 
   void _loadFormData(Veiculo veiculo) {
-    if (veiculo != null) {
-      _formData['id'] = veiculo.id;
-      _formData['name'] = veiculo.name;
-      _formData['placa'] = veiculo.placa;
-      _formData['avatar'] = veiculo.avatar;
+    _formData['id'] = veiculo.id;
+    _formData['name'] = veiculo.name;
+    _formData['placa'] = veiculo.placa;
+    _formData['avatar'] = veiculo.avatar;
     }
-  }
 
   @override
   Widget build(BuildContext context) {
