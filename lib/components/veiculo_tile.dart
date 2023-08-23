@@ -4,11 +4,11 @@ import 'package:veiculos/routes/app_routes.dart';
 
 class VeiculoTile extends StatelessWidget {
   final Veiculo veiculo;
-  const VeiculoTile(this.veiculo);
+  const VeiculoTile(this.veiculo, {super.key});
 
   @override
   Widget build(BuildContext context) {
-    final avatar = veiculo.avatar == null || veiculo.avatar.isEmpty
+    final avatar = veiculo.avatar.isEmpty
         ? const CircleAvatar(child: Icon(Icons.car_crash))
         : CircleAvatar(backgroundImage: NetworkImage(veiculo.avatar));
 
@@ -16,7 +16,7 @@ class VeiculoTile extends StatelessWidget {
       leading: avatar,
       title: Text(veiculo.name),
       subtitle: Text(veiculo.placa),
-      trailing: Container(
+      trailing: SizedBox(
         width: 100,
         child: Row(
           children: <Widget>[
